@@ -4,6 +4,25 @@
 using namespace std;
 using namespace filesystem;
 
+string askPath();
+vector<directory_entry> getFolderContent();
+string categorization(path &ext);
+void initFolders(vector<directory_entry> &content);
+void organizeContent(vector<directory_entry> &content);
+
+int main() {
+    const string FolderPath = askPath(); // get folder path
+    current_path(FolderPath); // change to the new path
+
+    vector<directory_entry> fls = getFolderContent(); // get list of files & folders
+    initFolders(fls); // create organizing folders
+    organizeContent(fls); // move files into their new places
+
+    cout<<"Folder Organized Successfully"<<endl;
+
+    return 0;
+}
+
 string askPath(){
     string path;
     cout<<"Enter Folder Path to Organize it: ";
@@ -63,16 +82,4 @@ void organizeContent(vector<directory_entry> &content){
             e.what();
         }
     }
-}
-int main() {
-    const string FolderPath = askPath(); // get folder path
-    current_path(FolderPath); // change to the new path
-
-    vector<directory_entry> fls = getFolderContent(); // get list of files & folders
-    initFolders(fls); // create organizing folders
-    organizeContent(fls); // move files into their new places
-
-    cout<<"Folder Organized Successfully"<<endl;
-
-    return 0;
 }
