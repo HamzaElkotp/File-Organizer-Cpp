@@ -1,0 +1,3 @@
+D:/Local/Development/github/File-Organizer-Cpp/cmake-build-debug/CMakeFiles/File_Organizer_Cpp.dir
+D:/Local/Development/github/File-Organizer-Cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Local/Development/github/File-Organizer-Cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
